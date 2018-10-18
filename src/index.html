@@ -5,9 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Daily Journal</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Space+Mono:400,400i" rel="stylesheet">
   <link rel="stylesheet" href="styles/journal.css">
 </head>
 <body>
-  <title>My Daily Journal</title>
+  <h1 class="site-title">My Daily Journal</h1>
+  
+  <!-- New Entry Form -->
+  <form action="" class="entry-form">
+    <fieldset>
+      <legend>Write an Entry</legend>
+      
+      <div class="field-wrapper field__entry">
+        <label for="entryContent">Journal Entry</label>
+        <textarea name="entryContent" id="entryContent" cols="30" rows="10"></textarea>
+      </div>
+      <div class="field-group field-group__3col">
+        <div class="field-wrapper field__date">
+          <label for="entryDate">Entry Date</label>
+          <input type="date" name="entryDate" id="entryDate">
+        </div>
+        <div class="field-wrapper field__concepts">
+          <label for="entryConcepts">Concepts Covered</label>
+          <input type="text" name="entryConcepts" id="entryConcepts">
+        </div>
+        <div class="field-wrapper field__mood">
+          <label for="entryMood">Mood</label>
+          <select name="entryMood" id="entryMood">
+            <option value="happy">Happy</option>
+            <option value="fine">Fine</option>
+            <option value="angry">Angry</option>
+            <option value="frustrated">Frustrated</option>
+            <option value="optimistic">Optimistic</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" class="submit-entry" value="Save Journal Entry">
+    </fieldset>
+  </form>
+  <!-- End New Entry Form -->
+
 </body>
 </html>

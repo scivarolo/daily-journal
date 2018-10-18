@@ -1,0 +1,122 @@
+/* 
+  Google Fonts: 
+  font-family: 'Space Mono', monospace;
+  font-family: 'Karla', sans-serif;
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Karla', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #424242;
+  padding: 0 25px;
+}
+
+.site-title {
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
+  color: #0ce5a9;
+}
+
+.entry-form {
+  max-width: 600px;
+}
+.entry-form fieldset {
+  padding: 15px;
+  border: 1px solid #0ce5a9;
+}
+.entry-form legend {
+  padding: 10px 15px;
+  background-color: #0ce5a9;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.field-wrapper,
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-wrapper {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 600px) {
+  .field-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .field-group__3col .field-wrapper {
+    flex-basis: 33.33%;
+  }
+  .field-group .field-wrapper:not(:last-child) {
+    padding-right: 1em;
+  }
+}
+
+form label {
+  font-family: 'Space Mono', 'Courier New', Courier, monospace;
+  font-size: .875em;
+  margin-bottom: 5px;
+  color: rgb(125, 125, 125);
+}
+
+input,
+textarea,
+select {
+  padding: 0 15px;
+  background-color: rgb(240, 240, 240);
+  transition: .25s background-color ease-in-out;
+  border: none;
+  border-bottom: 3px solid rgba(12, 229, 169, 1);
+}
+
+input, select {
+  height: 30px;
+}
+
+select {
+  position: relative;
+  border-bottom: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  background-color: rgb(247, 247, 247);
+}
+
+textarea {
+  padding-top: 15px;
+}
+
+input[type="submit"] {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+  background-color: rgba(12, 229, 169, 1);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(9, 204, 149);
+}
+
+input[type="submit"]:active {
+  background-color: rgb(7, 182, 132);
+}
+
