@@ -52,7 +52,6 @@ const entriesFrag = document.createDocumentFragment();
 
 function outputEntries(entries) {
   entries.forEach((entry) => {
-    debugger;
     entriesFrag.appendChild(buildEntry(entry));
   });
   entriesWrapper.appendChild(entriesFrag);
