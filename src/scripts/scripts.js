@@ -43,6 +43,15 @@ const outputEntries = (entries) => {
   entriesWrapper.appendChild(entriesFrag);
 }
 
-outputEntries(journalEntries);
+//outputEntries(journalEntries);
 
+/* 
+  Fetch journal entries from the API
+  Output entries to the DOM with outputEntries();
+*/
 
+fetch('http://localhost:8088/entries')
+  .then(response => response.json())
+  .then(entries => {
+    outputEntries(entries);
+  });
