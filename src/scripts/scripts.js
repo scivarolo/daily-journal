@@ -5,17 +5,23 @@
 const buildEntryComponent = (entry) => {
   let entryHTML = document.createElement('article');
   entryHTML.className = "entry";
+
+  let concepts = [];
+  entry.concepts.forEach((concept) => {
+    concepts.push(`<span class="concept">${concept}</span>`);
+  });
+
   entryHTML.innerHTML = `
     <header class="entry__header">
       <h2 class="entry__title">${entry.title}</h2>
       <h3 class="entry__date">${entry.date}</h3>
-      <div class="entry__concepts">${entry.concepts.join(", ")}</div>
+      <div class="entry__concepts">${concepts.join("")}</div>
     </header>
     <div class="entry__content">
       <p>${entry.content}</p>
     </div>
     <footer class="entry__footer">
-      <div class="entry__mood">${entry.mood}</div>
+      <div class="entry__mood">Mood: ${entry.mood}</div>
     </footer>
   `;
   return entryHTML;

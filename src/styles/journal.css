@@ -3,6 +3,10 @@
   font-family: 'Space Mono', monospace;
   font-family: 'Karla', sans-serif;
 */
+:root {
+  --teal: rgba(12, 229, 169, 1);
+  --main-color: var(--teal);
+}
 
 html {
   box-sizing: border-box;
@@ -23,19 +27,43 @@ body {
 
 .site-title {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
-  color: #0ce5a9;
+  color: var(--teal);
 }
 
-.entry-form {
-  max-width: 600px;
+/*---------- Page Layout ----------*/
+.entries-wrapper {
+  margin-bottom: 100px;
 }
+
+@media (min-width: 800px) {
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+  }
+  .form-wrapper {
+    position: relative;
+  }
+  .entry-form {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px;
+  }
+  .site-title {
+    position: sticky;
+    top: 20px;
+  }
+}
+
+/*---------- Form ----------*/
+
 .entry-form fieldset {
   padding: 15px;
-  border: 1px solid #0ce5a9;
+  border: 1px solid var(--main-color);
 }
 .entry-form legend {
   padding: 10px 15px;
-  background-color: #0ce5a9;
+  background-color: var(--main-color);
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
@@ -78,7 +106,7 @@ select {
   background-color: rgb(240, 240, 240);
   transition: .25s background-color ease-in-out;
   border: none;
-  border-bottom: 3px solid rgba(12, 229, 169, 1);
+  border-bottom: 3px solid var(--main-color);
 }
 
 input, select {
@@ -105,7 +133,7 @@ input[type="submit"] {
   margin-left: auto;
   margin-right: 0;
   display: block;
-  background-color: rgba(12, 229, 169, 1);
+  background-color: var(--main-color);
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -120,3 +148,44 @@ input[type="submit"]:active {
   background-color: rgb(7, 182, 132);
 }
 
+/*---------- Entries ----------*/
+
+.entry {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.entry__title {
+  color: var(--main-color);
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 0;
+  font-size: 2em;
+}
+.entry__date {
+  color: rgb(125, 125, 125);
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.concept {
+  margin-right: 10px;
+  padding: 4px 8px;
+  background-color: var(--main-color);
+  border-radius: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+.concept:last-child {
+  margin-right: 0;
+}
+
+.entry__content {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.entry__footer {
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+  font-size: 13px;
+}
