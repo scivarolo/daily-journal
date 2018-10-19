@@ -1,30 +1,38 @@
+/* HTML Element Factory */
+function buildEl(el, className, content, ...children) {
+  let element = document.createElement(el);
+  element.className = className || null;
+  element.textContent = content || null;
+  children.forEach((child) => {
+    element.appendChild(child);
+  });
+  return element;
+}
+
 /* 
   Create and return a journal entry component
 */
 
-const buildEntryComponent = (entry) => {
-  let entryHTML = document.createElement('article');
-  entryHTML.className = "entry";
+function buildEntry(entry) {
 
+  let entryTitle = buildEl("h2", "entry__title", entry.title);
+  let entryDate = buildEl("h3", "entry__date", entry.date);
+  
   let concepts = [];
   entry.concepts.forEach((concept) => {
-    concepts.push(`<span class="concept">${concept}</span>`);
+    concepts.push(buildEl("span", "concept", concept));
   });
+  let entryConcepts = buildEl("div", "entry__concepts", null, ...concepts);
+  
+  let entryHeader = buildEl("header", "entry__header", null, entryTitle, entryDate, entryConcepts);
 
-  entryHTML.innerHTML = `
-    <header class="entry__header">
-      <h2 class="entry__title">${entry.title}</h2>
-      <h3 class="entry__date">${entry.date}</h3>
-      <div class="entry__concepts">${concepts.join("")}</div>
-    </header>
-    <div class="entry__content">
-      <p>${entry.content}</p>
-    </div>
-    <footer class="entry__footer">
-      <div class="entry__mood">Mood: ${entry.mood}</div>
-    </footer>
-  `;
-  return entryHTML;
+  let contentP = buildEl("p", null, entry.content);
+  let entryContent = buildEl("div", "entry__content", null, contentP);
+
+  let entryMood = buildEl("div", "entry__mood", `Mood: ${entry.mood}`,)
+  let entryFooter = buildEl("footer", "entry__footer", null, entryMood);
+
+  return buildEl("article", "entry", null, entryHeader, entryContent, entryFooter);
 }
 
 /* 
@@ -42,9 +50,9 @@ const entriesFrag = document.createDocumentFragment();
   Entries frag is appended to entriesWrapper in DOM.
 */
 
-const outputEntries = (entries) => {
+function outputEntries(entries) {
   entries.forEach((entry) => {
-    entriesFrag.appendChild(buildEntryComponent(entry));
+    entriesFrag.appendChild(buildEntry(entry));
   });
   entriesWrapper.appendChild(entriesFrag);
 }
