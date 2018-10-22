@@ -5,7 +5,10 @@
 
 const API = {
   getJournalEntries () {
-    return fetch("http://localhost:8088/entries")
+    return fetch(this.url)
       .then(response => response.json())
   }
 }
+
+const entriesAPI = Object.create(API)
+entriesAPI.url = "http://localhost:8088/entries"
