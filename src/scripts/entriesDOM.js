@@ -21,7 +21,7 @@ const render = Object.create({
     const entriesFrag = document.createDocumentFragment();
 
     entries.forEach((entry) => {
-      entriesFrag.appendChild(buildEntry(entry));
+      entriesFrag.appendChild(build.entry(entry));
     });
 
     entriesWrapper.appendChild(entriesFrag);
