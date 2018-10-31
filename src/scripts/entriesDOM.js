@@ -5,7 +5,7 @@
   Entries frag is appended to entriesWrapper in DOM.
 */
 
-const render = Object.create({
+const render = {
   entries(entries, wrapperEl) {
     const entriesWrapper = document.querySelector(wrapperEl)
     const entriesFrag = document.createDocumentFragment()
@@ -16,4 +16,4 @@ const render = Object.create({
 
     entriesWrapper.appendChild(entriesFrag)
   }
-})
+}

@@ -2,7 +2,7 @@
   Purpose: Build object with methods to build HTML Elements and build entries out of those elements.
 */
 
-const build = Object.create({
+const build = {
   element(el, className, content, ...children) {
     // HTML Element Factory
     let element = document.createElement(el)
@@ -34,4 +34,4 @@ const build = Object.create({
 
     return this.element("article", "entry", null, entryHeader, entryContent, entryFooter)
   }
-})
+}
