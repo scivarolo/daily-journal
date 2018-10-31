@@ -19,24 +19,24 @@
           <legend>Write an Entry</legend>
           <div class="field-wrapper">
             <label for="entryTitle">Entry Title</label>
-            <input type="text" name="entryTitle" id="entryTitle">
+            <input type="text" name="entryTitle" id="entryTitle" required>
           </div>
           <div class="field-wrapper field__entry">
             <label for="entryContent">Journal Entry</label>
-            <textarea name="entryContent" id="entryContent" cols="30" rows="10"></textarea>
+            <textarea name="entryContent" id="entryContent" cols="30" rows="10" required></textarea>
           </div>
           <div class="field-group field-group__3col">
             <div class="field-wrapper field__date">
               <label for="entryDate">Entry Date</label>
-              <input type="date" name="entryDate" id="entryDate">
+              <input type="date" name="entryDate" id="entryDate" required>
             </div>
             <div class="field-wrapper field__concepts">
               <label for="entryConcepts">Concepts Covered</label>
-              <input type="text" name="entryConcepts" id="entryConcepts">
+              <input type="text" name="entryConcepts" id="entryConcepts" required>
             </div>
             <div class="field-wrapper field__mood">
               <label for="entryMood">Mood</label>
-              <select name="entryMood" id="entryMood">
+              <select name="entryMood" id="entryMood" required>
                 <option value="happy">Happy</option>
                 <option value="fine">Fine</option>
                 <option value="angry">Angry</option>
