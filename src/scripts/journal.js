@@ -26,4 +26,6 @@ document.querySelector(".submit-entry").addEventListener("click", (e) => {
     mood: mood
   }
   API.postEntry(entryObj)
+    .then(render.entry(entryObj, "#entries"))
+    .then(alert("Your entry was posted"))
 })

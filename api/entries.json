@@ -35,13 +35,13 @@
       "id": 3
     },
     {
-      "title": "fdsafjkdalfdk;j",
-      "content": "fjdksalf;dj kafl ;weioa fewiaof ewjiafwe ;fjwafewjkf ewaz",
+      "title": "POSTing to the Database",
+      "content": "I learned how to POST to the database. Only took a million tries!",
       "date": "2018-10-31",
       "concepts": [
-        "UGH"
+        "POST"
       ],
-      "mood": "frustrated",
+      "mood": "fine",
       "id": 4
     }
   ]

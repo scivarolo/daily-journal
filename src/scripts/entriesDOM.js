@@ -15,5 +15,11 @@ const render = {
     })
 
     entriesWrapper.appendChild(entriesFrag)
+  },
+  entry(entry, wrapperEl) {
+    const entriesWrapper = document.querySelector(wrapperEl)
+    const entryFrag = document.createDocumentFragment();
+    entryFrag.appendChild(build.entry(entry))
+    entriesWrapper.appendChild(entryFrag)
   }
 }

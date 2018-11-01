@@ -17,5 +17,10 @@ const API = {
       },
       body: JSON.stringify(entry)
     })
+  },
+  getLatestEntry(entry) {
+    let latestUrl = `${this.url}?_order=desc&_limit=1`
+    return fetch(latestUrl)
+      .then(response => response.json())
   }
 }
