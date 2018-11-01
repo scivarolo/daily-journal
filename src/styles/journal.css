@@ -1,5 +1,5 @@
-/* 
-  Google Fonts: 
+/*
+  Google Fonts:
   font-family: 'Space Mono', monospace;
   font-family: 'Karla', sans-serif;
 */
@@ -92,7 +92,7 @@ body {
   }
 }
 
-form label {
+.entry-form label {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: .875em;
   margin-bottom: 5px;
