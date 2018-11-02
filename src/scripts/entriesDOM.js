@@ -21,5 +21,8 @@ const render = {
     const entryFrag = document.createDocumentFragment();
     entryFrag.appendChild(build.entry(entry))
     entriesWrapper.appendChild(entryFrag)
+  },
+  form(form, wrapperEl) {
+    document.querySelector(wrapperEl).appendChild(form)
   }
 }
