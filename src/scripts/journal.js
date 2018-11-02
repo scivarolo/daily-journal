@@ -3,7 +3,16 @@
   Queries the API and outputs the entries into the DOM
 */
 
+/* Render the Form and get Moods from database */
+
 render.form(form.build(), ".form-wrapper")
+API.getMoods()
+  .then(moods => {
+    document.querySelector("#entryMood").appendChild(form.buildMoods(moods))
+  })
+
+
+/* Render the entries from the Database */
 
 API.getEntries()
   .then(entries => render.entries(entries, "#entries"))

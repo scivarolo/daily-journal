@@ -50,5 +50,15 @@ const form = {
     let entryForm = build.element("form", {class: "entry-form"}, null, fieldset)
     console.log(entryForm);
     return entryForm
+  },
+  buildMoods(moods) {
+    console.log(moods)
+
+    let moodEls = document.createDocumentFragment()
+    moods.forEach(mood => {
+      let moodEl = build.element("option", {value: mood.mood}, mood.mood)
+      moodEls.appendChild(moodEl)
+    })
+    return moodEls
   }
 }

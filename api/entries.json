@@ -43,76 +43,29 @@
       ],
       "mood": "fine",
       "id": 4
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 5
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 6
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 7
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 8
-    },
-    {
-      "title": "test",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 9
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "happy",
-      "id": 10
-    },
-    {
-      "title": "",
-      "content": "",
-      "date": "",
-      "concepts": [
-        ""
-      ],
-      "mood": "",
-      "id": 11
     }
+  ],
+  "moods": [
+    {
+      "mood": "Happy",
+      "id": 1
+    },
+    {
+      "mood": "Fine",
+      "id": 2
+    },
+    {
+      "mood": "Angry",
+      "id": 3
+    },
+    {
+      "mood": "Frustrated",
+      "id": 4
+    },
+    {
+      "mood": "Optimistic",
+      "id": 5
+    }
+
   ]
 }

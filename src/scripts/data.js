@@ -4,13 +4,16 @@
 */
 
 const API = {
-  url: "http://localhost:8088/entries",
+  urls: {
+    entries: "http://localhost:8088/entries",
+    moods: "http://localhost:8088/moods"
+  },
   getEntries() {
-    return fetch(this.url)
+    return fetch(this.urls.entries)
       .then(response => response.json())
   },
   postEntry(entry) {
-    return fetch(this.url, {
+    return fetch(this.urls.entries, {
       method: "POST",
       headers:{
         "Content-Type": "application/json"
@@ -19,8 +22,12 @@ const API = {
     })
   },
   getLatestEntry(entry) {
-    let latestUrl = `${this.url}?_order=desc&_limit=1`
+    let latestUrl = `${this.urls.entries}?_order=desc&_limit=1`
     return fetch(latestUrl)
+      .then(response => response.json())
+  },
+  getMoods() {
+    return fetch(this.urls.moods)
       .then(response => response.json())
   }
 }
