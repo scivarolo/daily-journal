@@ -52,8 +52,6 @@ const form = {
     return entryForm
   },
   buildMoods(moods) {
-    console.log(moods)
-
     let moodEls = document.createDocumentFragment()
     moods.forEach(mood => {
       let moodEl = build.element("option", {value: mood.mood}, mood.mood)
