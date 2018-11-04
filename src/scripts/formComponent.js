@@ -35,7 +35,14 @@ const form = {
     //Concepts
     let conceptEls = buildFormElement("entryConcepts", "text", "Concepts Covered")
     let conceptWrapper = build.element("div", {class: "field-wrapper field__concepts"}, null, conceptEls)
-
+    conceptWrapper.childNodes[1].setAttribute("maxlength", "30")
+    conceptWrapper.childNodes[1].addEventListener("keyup", event => {
+      if(event.target.value.length === 30) {
+        event.target.parentNode.classList.add("maxlength")
+      } else {
+        event.target.parentNode.classList.remove("maxlength")
+      }
+    })
     //Mood
     let moodEls = buildFormElement("entryMood", "select", "Mood")
     let moodWrapper = build.element("div", {class: "field-wrapper field__mood"}, null, moodEls)
@@ -48,7 +55,7 @@ const form = {
     let legend = build.element("legend", {}, "Write an Entry")
     let fieldset = build.element("fieldset", {}, null, legend, titleWrapper, contentWrapper, optionsWrapper, saveButton)
     let entryForm = build.element("form", {class: "entry-form"}, null, fieldset)
-    console.log(entryForm);
+
     return entryForm
   },
   buildMoods(moods) {

@@ -148,6 +148,16 @@ input[type="submit"]:active {
   background-color: rgb(7, 182, 132);
 }
 
+.maxlength input {
+  border-bottom-color: rgb(238, 109, 120);
+}
+.maxlength::after {
+  content: "Max length is 30 characters";
+  color: rgb(238, 109, 120);
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 /*---------- Entries ----------*/
 
 .entry {
