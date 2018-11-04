@@ -5,15 +5,24 @@
   Entries frag is appended to entriesWrapper in DOM.
 */
 
-const render = Object.create({
+const render = {
   entries(entries, wrapperEl) {
     const entriesWrapper = document.querySelector(wrapperEl)
     const entriesFrag = document.createDocumentFragment()
-
+    entriesWrapper.innerHTML = ""
     entries.forEach((entry) => {
       entriesFrag.appendChild(build.entry(entry))
     })
 
     entriesWrapper.appendChild(entriesFrag)
+  },
+  entry(entry, wrapperEl) {
+    const entriesWrapper = document.querySelector(wrapperEl)
+    const entryFrag = document.createDocumentFragment();
+    entryFrag.appendChild(build.entry(entry))
+    entriesWrapper.appendChild(entryFrag)
+  },
+  form(form, wrapperEl) {
+    document.querySelector(wrapperEl).appendChild(form)
   }
-})
+}

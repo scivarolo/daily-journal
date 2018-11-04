@@ -3,37 +3,109 @@
     {
       "date": "10/18/2018",
       "title": "Setting up a JSON Server",
-      "concepts": ["JSON Server", "HTTP Requests"],
+      "concepts": [
+        "JSON Server",
+        "HTTP Requests"
+      ],
       "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
-      "mood": "Excited"
+      "mood": "Excited",
+      "id": 1
     },
-    { 
+    {
       "date": "10/18/2018",
       "title": "Broken Promises",
-      "concepts": ["Promises", "Fetch", "API"],
+      "concepts": [
+        "Promises",
+        "Fetch",
+        "API"
+      ],
       "content": "We learned how to build Promise chains to fetch data and wait for it to arrive before moving on to the next step with a chain of then() statements. Make sure you return your data with your Promise!",
-      "mood": "Overwhelmed"
+      "mood": "Overwhelmed",
+      "id": 2
     },
     {
       "date": "10/18/2018",
       "title": "Setting up a JSON Server",
-      "concepts": ["JSON Server", "HTTP Requests"],
+      "concepts": [
+        "JSON Server",
+        "HTTP Requests"
+      ],
       "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
-      "mood": "Excited"
-    },
-    { 
-      "date": "10/18/2018",
-      "title": "Broken Promises",
-      "concepts": ["Promises", "Fetch", "API"],
-      "content": "We learned how to build Promise chains to fetch data and wait for it to arrive before moving on to the next step with a chain of then() statements. Make sure you return your data with your Promise!",
-      "mood": "Overwhelmed"
+      "mood": "Excited",
+      "id": 3
     },
     {
-      "date": "10/18/2018",
-      "title": "Setting up a JSON Server",
-      "concepts": ["JSON Server", "HTTP Requests"],
-      "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
-      "mood": "Excited"
+      "title": "POSTing to the Database",
+      "content": "I learned how to POST to the database. Only took a million tries!",
+      "date": "2018-10-31",
+      "concepts": [
+        "POST"
+      ],
+      "mood": "fine",
+      "id": 4
+    },
+    {
+      "title": "Data Validation",
+      "content": "Testing out if my form validation for empty fields works.",
+      "date": "2018-11-01",
+      "concepts": [
+        "Form Validation"
+      ],
+      "mood": "Fine",
+      "id": 5
+    },
+    {
+      "title": "Test a tweak",
+      "content": "tdsafjdsakl",
+      "date": "2018-11-03",
+      "concepts": [
+        "Fetch"
+      ],
+      "mood": "Happy",
+      "id": 6
+    },
+    {
+      "title": "Post then Get",
+      "content": "Lets see if I can post and get in a single method.",
+      "date": "2018-11-03",
+      "concepts": [
+        "Methods"
+      ],
+      "mood": "Happy",
+      "id": 7
+    },
+    {
+      "title": "POST then GET",
+      "content": "In a single method.",
+      "date": "2018-11-03",
+      "concepts": [
+        "Testing",
+        "More Testing"
+      ],
+      "mood": "Happy",
+      "id": 8
+    }
+  ],
+  "moods": [
+    {
+      "mood": "Happy",
+      "id": 1
+    },
+    {
+      "mood": "Fine",
+      "id": 2
+    },
+    {
+      "mood": "Angry",
+      "id": 3
+    },
+    {
+      "mood": "Frustrated",
+      "id": 4
+    },
+    {
+      "mood": "Optimistic",
+      "id": 5
     }
   ]
 }

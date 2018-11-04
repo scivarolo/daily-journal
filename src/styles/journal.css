@@ -1,5 +1,5 @@
-/* 
-  Google Fonts: 
+/*
+  Google Fonts:
   font-family: 'Space Mono', monospace;
   font-family: 'Karla', sans-serif;
 */
@@ -92,7 +92,7 @@ body {
   }
 }
 
-form label {
+.entry-form label {
   font-family: 'Space Mono', 'Courier New', Courier, monospace;
   font-size: .875em;
   margin-bottom: 5px;
@@ -146,6 +146,16 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
   background-color: rgb(7, 182, 132);
+}
+
+.maxlength input {
+  border-bottom-color: rgb(238, 109, 120);
+}
+.maxlength::after {
+  content: "Max length is 30 characters";
+  color: rgb(238, 109, 120);
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 /*---------- Entries ----------*/
