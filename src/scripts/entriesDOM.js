@@ -9,7 +9,7 @@ const render = {
   entries(entries, wrapperEl) {
     const entriesWrapper = document.querySelector(wrapperEl)
     const entriesFrag = document.createDocumentFragment()
-
+    entriesWrapper.innerHTML = ""
     entries.forEach((entry) => {
       entriesFrag.appendChild(build.entry(entry))
     })

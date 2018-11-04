@@ -37,9 +37,13 @@ document.querySelector(".submit-entry").addEventListener("click", (e) => {
       concepts: concepts.split(", "),
       mood: mood
     }
-    API.postEntry(entryObj)
-      .then(render.entry(entryObj, "#entries"))
-      .then(alert("Your entry was posted"))
+
+    API.postThenGet(entryObj)
+      .then(entries => render.entries(entries, "#entries"))
+      .then(() => alert("Your entry was posted"))
+    // API.postEntry(entryObj)
+    //   .then(render.entry(entryObj, "#entries"))
+    //   .then(() => alert("Your entry was posted"))
   } else {
     alert("There are some empty fields!")
   }

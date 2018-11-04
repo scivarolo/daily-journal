@@ -21,6 +21,10 @@ const API = {
       body: JSON.stringify(entry)
     })
   },
+  postThenGet(entry) {
+    return this.postEntry(entry)
+      .then(() => API.getEntries())
+  },
   getLatestEntry(entry) {
     let latestUrl = `${this.urls.entries}?_order=desc&_limit=1`
     return fetch(latestUrl)
