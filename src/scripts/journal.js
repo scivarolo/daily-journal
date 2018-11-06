@@ -17,8 +17,10 @@ API.getMoods()
     moodFilters.forEach(radio => {
       radio.addEventListener("click", event => {
         let mood = event.target.value
-        console.log(mood)
-        API.getEntries()
+        if (mood === "All") {
+          API.getEntries().then(entries => render.entries(entries, "#entries"))
+        } else {
+          API.getEntries()
           .then(entries => entries.filter(entry => entry.mood.toLowerCase() === mood.toLowerCase()))
           .then(filteredEntries => {
             if(filteredEntries != 0) {
@@ -27,6 +29,8 @@ API.getMoods()
               document.querySelector("#entries").innerHTML = "There are no posts with that mood."
             }
           })
+        }
+
       })
     })
   })
