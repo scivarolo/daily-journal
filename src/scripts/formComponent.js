@@ -72,7 +72,6 @@ const form = {
     moods.push({
       mood: "All"
     })
-    console.log(moods)
     moods.forEach(mood => {
       let moodLabel = build.element("label", {for: mood.mood}, mood.mood)
       let moodInput = build.element("input", {type: "radio", name:"moodFilter", value: mood.mood})
