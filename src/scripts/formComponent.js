@@ -72,10 +72,11 @@ const form = {
     moods.forEach(mood => {
       let moodLabel = build.element("label", {for: mood.mood}, mood.mood)
       let moodInput = build.element("input", {type: "radio", name:"moodFilter", value: mood.mood})
-      moodEls.appendChild(moodInput)
-      moodEls.appendChild(moodLabel)
+      let wrapper = build.element("div", {class:"radio-wrapper"}, null, moodInput, moodLabel)
+      moodEls.appendChild(wrapper)
     })
-    let fieldset = build.element("fieldset", {}, null, legend, moodEls)
+    let div = build.element("div", {class: "radio-group"}, null, moodEls)
+    let fieldset = build.element("fieldset", {}, null, legend, div)
     return fieldset
   }
 }
