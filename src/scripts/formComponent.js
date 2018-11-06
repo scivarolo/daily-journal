@@ -1,6 +1,5 @@
 const form = {
   build() {
-    const fragment = document.createDocumentFragment();
 
     function buildFormElement(id, inputType, labelText) {
       let label = build.element("label", {for: id}, labelText)
