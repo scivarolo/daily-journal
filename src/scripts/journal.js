@@ -3,12 +3,14 @@
   Queries the API and outputs the entries into the DOM
 */
 
-/* Render the Form and get Moods from database */
+/* Render the Form and get Moods from database to populate dropdown and mood filter */
 
 render.form(form.build(), ".form-wrapper")
+
 API.getMoods()
   .then(moods => {
     document.querySelector("#entryMood").appendChild(form.buildMoods(moods))
+    document.querySelector("#mood-filter").appendChild(form.buildMoodsFilter(moods))
   })
 
 

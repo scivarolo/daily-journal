@@ -65,5 +65,17 @@ const form = {
       moodEls.appendChild(moodEl)
     })
     return moodEls
+  },
+  buildMoodsFilter(moods) {
+    let moodEls = document.createDocumentFragment()
+    let legend = build.element("legend", {}, "Filter Posts by Mood")
+    moods.forEach(mood => {
+      let moodLabel = build.element("label", {for: mood.mood}, mood.mood)
+      let moodInput = build.element("input", {type: "radio", name:"moodFilter", value: mood.mood})
+      moodEls.appendChild(moodInput)
+      moodEls.appendChild(moodLabel)
+    })
+    let fieldset = build.element("fieldset", {}, null, legend, moodEls)
+    return fieldset
   }
 }
