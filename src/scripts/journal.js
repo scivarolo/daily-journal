@@ -23,7 +23,7 @@ API.getMoods()
           API.getEntries()
           .then(entries => entries.filter(entry => entry.mood.toLowerCase() === mood.toLowerCase()))
           .then(filteredEntries => {
-            if(filteredEntries != 0) {
+            if(filteredEntries !== 0) {
               render.entries(filteredEntries, "#entries")
             } else {
               document.querySelector("#entries").innerHTML = "There are no posts with that mood."
