@@ -11,6 +11,24 @@ API.getMoods()
   .then(moods => {
     document.querySelector("#entryMood").appendChild(form.buildMoods(moods))
     document.querySelector("#mood-filter").appendChild(form.buildMoodsFilter(moods))
+    return document.querySelectorAll(".radio-group input")
+  })
+  .then(moodFilters => {
+    moodFilters.forEach(radio => {
+      radio.addEventListener("click", event => {
+        let mood = event.target.value
+        console.log(mood)
+        API.getEntries()
+          .then(entries => entries.filter(entry => entry.mood.toLowerCase() === mood.toLowerCase()))
+          .then(filteredEntries => {
+            if(filteredEntries != 0) {
+              render.entries(filteredEntries, "#entries")
+            } else {
+              document.querySelector("#entries").innerHTML = "There are no posts with that mood."
+            }
+          })
+      })
+    })
   })
 
 
@@ -50,3 +68,17 @@ document.querySelector(".submit-entry").addEventListener("click", (e) => {
     alert("There are some empty fields!")
   }
 })
+
+/* Event Listener for Mood Filter */
+// let moodFilters = document.querySelectorAll(".radio-group input")
+// console.log("Moodfilters", moodFilters)
+
+// document.querySelectorAll(".radio-group input").forEach(radio => {
+//   console.log(radio)
+//   radio.addEventListener("click", event => {
+//     let mood = event.target.value
+//     API.getEntries()
+//       .then(entries => entries.filter(entry => entry.mood === mood))
+//       .then(filteredEntries => render.entries(filteredEntries, "#entries"))
+//   })
+// })
