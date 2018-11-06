@@ -44,7 +44,7 @@ body {
   .form-wrapper {
     position: relative;
   }
-  .entry-form {
+  .sticky-wrapper {
     position: -webkit-sticky;
     position: sticky;
     top: 90px;
@@ -166,11 +166,13 @@ input[type="submit"]:active {
 .radio-group {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin: 0 -5px;
 }
 
 .radio-wrapper {
   display: flex;
+  padding: 5px;
 }
 
 .radio-group input {
