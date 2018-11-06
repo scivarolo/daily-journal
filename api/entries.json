@@ -84,6 +84,16 @@
       ],
       "mood": "Happy",
       "id": 8
+    },
+    {
+      "title": "jQuery",
+      "content": "Testing out some jQuery functionality.",
+      "date": "2018-11-06",
+      "concepts": [
+        "jQuery"
+      ],
+      "mood": "Fine",
+      "id": 9
     }
   ],
   "moods": [

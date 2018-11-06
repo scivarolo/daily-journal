@@ -9,8 +9,8 @@ render.form(form.build(), ".form-wrapper")
 
 API.getMoods()
   .then(moods => {
-    document.querySelector("#entryMood").appendChild(form.buildMoods(moods))
-    document.querySelector("#mood-filter").appendChild(form.buildMoodsFilter(moods))
+    $("#entryMood").append(form.buildMoods(moods))
+    $("#mood-filter").append(form.buildMoodsFilter(moods))
     return document.querySelectorAll(".radio-group input")
   })
   .then(moodFilters => {
@@ -44,14 +44,14 @@ API.getEntries()
   Event Listener to submit new entries from form
 */
 
-document.querySelector(".submit-entry").addEventListener("click", (e) => {
+$(".submit-entry").click(function (e) {
   e.preventDefault()
   if(document.querySelector(".entry-form").checkValidity()) {
-    let title = document.querySelector("#entryTitle").value
-    let content = document.querySelector("#entryContent").value
-    let date = document.querySelector("#entryDate").value
-    let concepts = document.querySelector("#entryConcepts").value
-    let mood = document.querySelector("#entryMood").value
+    let title = $("#entryTitle").val()
+    let content = $("#entryContent").val()
+    let date = $("#entryDate").val()
+    let concepts = $("#entryConcepts").val()
+    let mood = $("#entryMood").val()
 
     let entryObj = {
       title: title,
