@@ -35,7 +35,6 @@ API.getMoods()
     })
   })
 
-
 /* Render the entries from the Database */
 
 API.getEntries()
@@ -65,24 +64,7 @@ document.querySelector(".submit-entry").addEventListener("click", (e) => {
     API.postThenGet(entryObj)
       .then(entries => render.entries(entries, "#entries"))
       .then(() => alert("Your entry was posted"))
-    // API.postEntry(entryObj)
-    //   .then(render.entry(entryObj, "#entries"))
-    //   .then(() => alert("Your entry was posted"))
   } else {
     alert("There are some empty fields!")
   }
 })
-
-/* Event Listener for Mood Filter */
-// let moodFilters = document.querySelectorAll(".radio-group input")
-// console.log("Moodfilters", moodFilters)
-
-// document.querySelectorAll(".radio-group input").forEach(radio => {
-//   console.log(radio)
-//   radio.addEventListener("click", event => {
-//     let mood = event.target.value
-//     API.getEntries()
-//       .then(entries => entries.filter(entry => entry.mood === mood))
-//       .then(filteredEntries => render.entries(filteredEntries, "#entries"))
-//   })
-// })
