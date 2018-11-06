@@ -44,7 +44,7 @@ body {
   .form-wrapper {
     position: relative;
   }
-  .entry-form {
+  .sticky-wrapper {
     position: -webkit-sticky;
     position: sticky;
     top: 90px;
@@ -57,11 +57,14 @@ body {
 
 /*---------- Form ----------*/
 
-.entry-form fieldset {
+.entry-form fieldset,
+.mood-filter fieldset {
   padding: 15px;
   border: 1px solid var(--main-color);
+  margin-bottom: 20px;
 }
-.entry-form legend {
+.entry-form legend,
+.mood-filter legend {
   padding: 10px 15px;
   background-color: var(--main-color);
   text-transform: uppercase;
@@ -156,6 +159,28 @@ input[type="submit"]:active {
   color: rgb(238, 109, 120);
   margin-top: 5px;
   font-size: 12px;
+}
+
+/*---------- Mood Filter ----------*/
+
+.radio-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 0 -5px;
+}
+
+.radio-wrapper {
+  display: flex;
+  padding: 5px;
+}
+
+.radio-group input {
+  margin-right: 5px;
+}
+
+.radio-wrapper input {
+  height: auto;
 }
 
 /*---------- Entries ----------*/
