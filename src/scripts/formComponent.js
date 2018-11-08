@@ -1,3 +1,5 @@
+import build from "./entryComponent"
+
 const form = {
   build() {
 
@@ -83,3 +85,5 @@ const form = {
     return fieldset
   }
 }
+
+export default form

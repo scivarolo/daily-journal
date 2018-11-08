@@ -5,6 +5,8 @@
   Entries frag is appended to entriesWrapper in DOM.
 */
 
+import build from "./entryComponent"
+
 const render = {
   entries(entries, wrapperEl) {
     const entriesWrapper = document.querySelector(wrapperEl)
@@ -26,3 +28,5 @@ const render = {
     document.querySelector(wrapperEl).appendChild(form)
   }
 }
+
+export default render
