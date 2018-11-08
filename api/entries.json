@@ -84,6 +84,17 @@
       ],
       "mood": "Happy",
       "id": 8
+    },
+    {
+      "title": "Modules!",
+      "content": "The Daily Journal now uses Browserify and all of the javascript is modularized. I can probably do some more work to clean them up. They got messy the last few rounds.",
+      "date": "2018-11-07",
+      "concepts": [
+        "Browserify",
+        "Modules"
+      ],
+      "mood": "Optimistic",
+      "id": 9
     }
   ],
   "moods": [
