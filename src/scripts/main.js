@@ -3,6 +3,10 @@
   Queries the API and outputs the entries into the DOM
 */
 
+import API from "./data"
+import render from "./entriesDOM"
+import form from "./formComponent"
+
 /* Render the Form and get Moods from database to populate dropdown and mood filter */
 
 render.form(form.build(), ".form-wrapper")

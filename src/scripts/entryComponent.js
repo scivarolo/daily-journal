@@ -39,3 +39,5 @@ const build = {
     return this.element("article", {class: "entry"}, null, entryHeader, entryContent, entryFooter)
   }
 }
+
+export default build
