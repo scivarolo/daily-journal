@@ -33,7 +33,7 @@ const build = {
     let contentP = this.element("p", {}, entry.content)
     let entryContent = this.element("div", {class: "entry__content"}, null, contentP)
 
-    let entryMood = this.element("div", {class: "entry__mood"}, `Mood: ${entry.mood}`)
+    let entryMood = this.element("div", {class: "entry__mood"}, `Mood: ${entry.mood.label}`)
     let entryFooter = this.element("footer", {class: "entry__footer"}, null, entryMood)
 
     return this.element("article", {class: "entry"}, null, entryHeader, entryContent, entryFooter)

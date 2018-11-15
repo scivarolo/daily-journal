@@ -5,7 +5,7 @@
 
 const API = {
   urls: {
-    entries: "http://localhost:8088/entries",
+    entries: "http://localhost:8088/entries?_expand=mood",
     moods: "http://localhost:8088/moods"
   },
   getEntries() {

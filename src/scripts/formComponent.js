@@ -62,7 +62,7 @@ const form = {
   buildMoods(moods) {
     let moodEls = document.createDocumentFragment()
     moods.forEach(mood => {
-      let moodEl = build.element("option", {value: mood.mood}, mood.mood)
+      let moodEl = build.element("option", {value: mood.label}, mood.label)
       moodEls.appendChild(moodEl)
     })
     return moodEls
@@ -71,11 +71,11 @@ const form = {
     let moodEls = document.createDocumentFragment()
     let legend = build.element("legend", {}, "Filter Posts by Mood")
     moods.push({
-      mood: "All"
+      label: "All"
     })
     moods.forEach(mood => {
-      let moodLabel = build.element("label", {for: mood.mood}, mood.mood)
-      let moodInput = build.element("input", {type: "radio", name:"moodFilter", value: mood.mood})
+      let moodLabel = build.element("label", {for: mood.label}, mood.label)
+      let moodInput = build.element("input", {type: "radio", name:"moodFilter", value: mood.label})
       let wrapper = build.element("div", {class:"radio-wrapper"}, null, moodInput, moodLabel)
       moodEls.appendChild(wrapper)
     })
