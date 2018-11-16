@@ -4,6 +4,7 @@
 
 import API from "./data"
 import loadEntries from "./entries"
+
 export default () => {
   document.querySelector(".submit-entry").addEventListener("click", (e) => {
     e.preventDefault()
