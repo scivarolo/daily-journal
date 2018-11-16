@@ -7,7 +7,7 @@ import loadEntries from "./entries"
 
 function buildMoodsDropdown(moods) {
   moods.forEach(mood => {
-    new DC("option", {value: mood.label}, mood.label).render("#entryMood")
+    new DC("option", {value: mood.label, id: `mood-${mood.id}`}, mood.label).render("#entryMood")
   })
 }
 
