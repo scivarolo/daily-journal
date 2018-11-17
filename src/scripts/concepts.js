@@ -14,10 +14,9 @@
 
 import API from "./data"
 
-const saveConcepts = (conceptsString, entryId) => {
+const saveConcepts = (conceptsArray, entryId) => {
   API.getConcepts()
   .then(dbConcepts => {
-    let conceptsArray = conceptsString.split(", ")
 
     conceptsArray.forEach(concept => {
 

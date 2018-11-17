@@ -19,7 +19,7 @@ class Entry {
     const eDate = new DC("h3", {className: "entry__date"}, this.date)
     let concepts = []
     this.concepts.forEach(concept => {
-      concepts.push(new DC("span", {className: "concept"}, concept))
+      concepts.push(new DC("span", {className: "concept"}, concept.concept.label))
     })
     let eConcepts = new DC("div", {className: "entry__concepts"}, ...concepts)
     let eHeader = new DC("header", {className: "entry__header"}, eTitle, eDate, eConcepts)

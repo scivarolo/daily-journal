@@ -3,10 +3,6 @@
     {
       "date": "10/18/2018",
       "title": "Setting up a JSON Server",
-      "concepts": [
-        "JSON Server",
-        "HTTP Requests"
-      ],
       "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
       "moodId": 1,
       "id": 1
@@ -14,11 +10,6 @@
     {
       "date": "10/18/2018",
       "title": "Broken Promises",
-      "concepts": [
-        "Promises",
-        "Fetch",
-        "API"
-      ],
       "content": "We learned how to build Promise chains to fetch data and wait for it to arrive before moving on to the next step with a chain of then() statements. Make sure you return your data with your Promise!",
       "moodId": 6,
       "id": 2
@@ -26,10 +17,6 @@
     {
       "date": "10/18/2018",
       "title": "Setting up a JSON Server",
-      "concepts": [
-        "JSON Server",
-        "HTTP Requests"
-      ],
       "content": "We learned how to setup a JSON server and I can't wait to set it up on my daily journal.",
       "moodId": 5,
       "id": 3
@@ -38,9 +25,6 @@
       "title": "POSTing to the Database",
       "content": "I learned how to POST to the database. Only took a million tries!",
       "date": "2018-10-31",
-      "concepts": [
-        "POST"
-      ],
       "moodId": 2,
       "id": 4
     },
@@ -48,9 +32,6 @@
       "title": "Data Validation",
       "content": "Testing out if my form validation for empty fields works.",
       "date": "2018-11-01",
-      "concepts": [
-        "Form Validation"
-      ],
       "moodId": 2,
       "id": 5
     },
@@ -58,9 +39,6 @@
       "title": "Test a tweak",
       "content": "tdsafjdsakl",
       "date": "2018-11-03",
-      "concepts": [
-        "Fetch"
-      ],
       "moodId": 1,
       "id": 6
     },
@@ -68,10 +46,6 @@
       "title": "Post then Get",
       "content": "Lets see if I can post and get in a single method.",
       "date": "2018-11-03",
-      "concepts": [
-        "Methods",
-        "Fetch"
-      ],
       "moodId": 1,
       "id": 7
     },
@@ -79,11 +53,6 @@
       "title": "POST then GET",
       "content": "In a single method.",
       "date": "2018-11-03",
-      "concepts": [
-        "Fetch",
-        "Methods",
-        "POST"
-      ],
       "moodId": 1,
       "id": 8
     },
@@ -91,12 +60,15 @@
       "title": "Modules!",
       "content": "The Daily Journal now uses Browserify and all of the javascript is modularized. I can probably do some more work to clean them up. They got messy the last few rounds.",
       "date": "2018-11-07",
-      "concepts": [
-        "Browserify",
-        "Modules"
-      ],
       "moodId": 5,
       "id": 9
+    },
+    {
+      "title": "fdjskafld;afjkda;",
+      "content": "fjdkslaf;djkaf;dsfkajf;",
+      "date": "2018-11-16",
+      "moodId": "4",
+      "id": 10
     }
   ],
   "moods": [
@@ -165,6 +137,10 @@
     {
       "id": 10,
       "label": "Modules"
+    },
+    {
+      "label": "Joiner Tables",
+      "id": 11
     }
   ],
   "entry_concepts": [

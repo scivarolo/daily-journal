@@ -4,6 +4,7 @@
 
 import API from "./data"
 import loadEntries from "./entries"
+import saveConcepts from "./concepts";
 
 export default () => {
   document.querySelector(".submit-entry").addEventListener("click", (e) => {
@@ -20,13 +21,17 @@ export default () => {
         title: title,
         content: content,
         date: date,
-        concepts: concepts.split(", "),
         moodId: moodId
       }
 
       API.postThenGet(entryObj)
         .then(entries => loadEntries(entries, "#entries"))
-        .then(() => alert("Your entry was posted"))
+        .then(() => {
+          API.getLatestEntry()
+          .then(entry => {
+            saveConcepts(concepts, entry[0].id)
+          })
+        })
     } else {
       alert("There are some empty fields!")
     }

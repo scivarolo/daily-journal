@@ -18,6 +18,20 @@ submitListener()
 
 /* Render the entries from the Database */
 API.getEntries()
+.then(entries => {
+  let conceptPromises = []
+  // set up Promises to get the concepts that go with each entry and add them to the entry object.
+  entries.forEach(entry => {
+    conceptPromises.push(
+      API.getEntryConcepts(entry.id)
+      .then(concepts => {
+        entry.concepts = concepts
+        return entry
+      })
+    )
+  })
+  return Promise.all(conceptPromises)
+})
 .then(entries => loadEntries(entries, "#entries"))
 
 /* Moods filter */

@@ -28,11 +28,11 @@ const API = {
     .then(response => response.json())
   },
   postThenGet(entry) {
-    return this.postEntry(entry)
+    return API.saveData(entry)
       .then(() => API.getEntries())
   },
-  getLatestEntry(entry) {
-    let latestUrl = `${this.urls.entries}?_order=desc&_limit=1`
+  getLatestEntry() {
+    let latestUrl = `${this.urls.base}entries?_sort=id&_order=desc&_limit=1`
     return fetch(latestUrl)
       .then(response => response.json())
   },
@@ -45,8 +45,11 @@ const API = {
     return fetch(url)
     .then(response => response.json())
   },
-  getConcepts() {
+  getConcepts(entryId) {
     let url = this.urls.concepts
+    if(entryId) {
+      url = `${this.urls.concepts}?entryId=${entryId}`
+    }
     return fetch(url)
     .then(response => response.json())
   }
