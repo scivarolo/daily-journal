@@ -4,6 +4,8 @@
 
 import API from "./data"
 import loadEntries from "./entries"
+import saveConcepts from "./concepts";
+
 export default () => {
   document.querySelector(".submit-entry").addEventListener("click", (e) => {
     e.preventDefault()
@@ -12,8 +14,6 @@ export default () => {
       let content = document.querySelector("#entryContent").value
       let date = document.querySelector("#entryDate").value
       let concepts = document.querySelector("#entryConcepts").value
-      //TODO: Remove mood label from entry posting
-      let mood = document.querySelector("#entryMood").value
       let selected = document.querySelector("#entryMood").options.selectedIndex
       let moodId = document.querySelector("#entryMood").options[selected].id.split("-")[1]
 
@@ -21,14 +21,17 @@ export default () => {
         title: title,
         content: content,
         date: date,
-        concepts: concepts.split(", "),
-        mood: mood,
         moodId: moodId
       }
 
       API.postThenGet(entryObj)
         .then(entries => loadEntries(entries, "#entries"))
-        .then(() => alert("Your entry was posted"))
+        .then(() => {
+          API.getLatestEntry()
+          .then(entry => {
+            saveConcepts(concepts, entry[0].id)
+          })
+        })
     } else {
       alert("There are some empty fields!")
     }
